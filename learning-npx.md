@@ -1,6 +1,14 @@
 ## [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) 是一个好东西
 
-避免全局安装
+- 可以执行依赖包的二进制文件，使用本地命令行工具不需要`npm scripts`
+- 执行一次性命令（多半是cli的包）
+- 不用node版本管理工具
+- 直接运行gist的代码
+- 避免全局安装，想用就用
+
+> Executes `<command>` either from a local `node_modules/.bin`, or from a central cache, installing any packages needed in order for `<command>` to run.
+
+不择手段让命令跑起来！
 
 ### 一次性的代码
 
