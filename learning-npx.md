@@ -42,4 +42,15 @@ npx -p node@X
 source npx --shell-auto-fallback shellname 
 ```
 
+想要链接到自己公司的仓库
+
+—userconfig 
+
+https://github.com/zkat/npx/issues/133
+
+```Bash
+echo "@mycompany:registry=https://my.companies.private.registry/" >> ~/.npmrc
+```
+
+
 
