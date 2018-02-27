@@ -23,6 +23,34 @@ git log  --until=    2017.12.31
 
 可以展示时间段的所有的提交信息
 
+###### 展示缩写的SHA-1的commit
+
+git log —abbrev-commit —oneline
+
+###### 展示某一个快照的操作记录
+
+git show <SHA-1>
+
+###### 查看某个分支当前对应的那个SHA-1
+
+git rev-parse <branch_name>
+
+Git show <branch_name>
+
+###### 查看当前分支比别的分支差几个commit
+
+查看远程master与本地feature2上差几个分支
+
+git log  origin/master..feature2
+
+看到只有一方拥有的commit
+
+git log origin/master…feature2
+
+这时候就要分不清哪个commit是哪条分支上的了
+
+git log —left-right origin/master…feature2
+
 ##### 修改commit
 
 git commit —amend
@@ -102,6 +130,30 @@ git branch --merge
 ###### 查看那些分支没有合并过
 
 git branch —no-merged
+
+###### 储藏 stash
+
+情境：突然接收到hotfix的命令，但是当然没分支做过一些修改，把修改藏起来
+
+git stash  / git stash save
+
+查看stash的列表
+
+git stash list
+
+取出藏起来的修改  有index参数的是回到你原来放进去的状态
+
+git stash apply / git stash apply —index
+
+删除stash列表里面的stash
+
+git stash drop stash@{n}
+
+###### 搜索的方法
+
+情境：想查看一些方法在文件的哪里出没过
+
+git grep -n —count xxx
 
 ###### 拉取的不同
 
