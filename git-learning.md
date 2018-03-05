@@ -160,3 +160,19 @@ git grep -n —count xxx
 git fetch vs git pull
 
 fetch是把远程上本地没有的数据拉取下来，但是让用户手动去合并这些内容，而 pull 的操作更像是 先fetch在merge的效果
+
+###### 关于子模块的命令
+
+git add submodule URL
+
+克隆一个包含子模块的项目，子模块是空目录，需要用以下几个命令
+
+git submodule init  && git submodule update
+
+或是克隆的时候，带上应有的参数
+
+git clone recursive url
+
+更新子模块的，自动合并到本地
+
+git submodule update --remote
