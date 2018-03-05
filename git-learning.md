@@ -176,3 +176,17 @@ git clone recursive url
 更新子模块的，自动合并到本地
 
 git submodule update --remote
+
+##### 个人配置git
+
+###### 统一 git commit的格式
+
+创建一个template 文件.gitmessage.txt 
+将commit的模板指定该文件
+git config --global commit.template ~/.gitmessage.txt
+
+###### 创建git的excludesfile
+
+不想在每一个仓库都创建ignore文件，那就做一次创建一个.gitignore_global文件
+
+Git config —global core.excludesfile ~/.gitignore_global
